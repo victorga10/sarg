@@ -9,4 +9,4 @@ RUN autoreconf -fi
 RUN ./configure
 RUN make && make install
 COPY sarg.conf /usr/local/etc/sarg.conf
-CMD serverti/sarg sarg -d $(date --date "+0 day ago" +%d/%m/%Y)
+CMD sarg -d $(date --date "+0 day ago" +%d/%m/%Y)
